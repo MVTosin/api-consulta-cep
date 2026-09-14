@@ -19,7 +19,7 @@ jobs:
         with:
           name: projetoZipado.zip
           path: |
-            '**.py'
+            **.py
             README.md
 
   Teste_Deploy:
