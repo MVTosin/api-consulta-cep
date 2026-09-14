@@ -2,7 +2,9 @@ name: Primeiro Continuous Delivery
 on: 
     push:
         branches: [ main ]
-        
+
+permissions:
+  contents: read
 
 jobs:
   Teste_Delivery:
