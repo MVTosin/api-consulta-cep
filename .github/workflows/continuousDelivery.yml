@@ -21,4 +21,13 @@ jobs:
           path: |
             '**.py'
             README.md
-            
+
+  Teste_Deploy:
+    runs-on: ubuntu-latest
+    needs: Teste_Delivery
+    steps:
+      - uses: actions/upload-artifact@v7
+        with:
+          name: projetoZipado.zip
+      - name: Mostrar estrutura dos arquivos baixados!
+        run:  ls -R
