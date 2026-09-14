@@ -2,7 +2,7 @@
 
 
 
-Projeto desenvolvido para aprendizado de Git, GitHub e DevOps.
+Projeto desenvolvido para aprendizado de Git, GitHub e DevOps, PUC-PR.
 
 
 
