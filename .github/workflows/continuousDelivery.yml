@@ -1,0 +1,22 @@
+name: Primeiro Continuous Delivery
+on: 
+    push:
+        branches: [ main ]
+        
+
+jobs:
+  Teste_Delivery:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo " Iniciando CD!!!"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Simulando Continuous Delivery!!!
+        uses: actions/upload-artifact@v7
+        with:
+          name: projetoZipado.zip
+          path: |
+            '**.py'
+            README.md
+            
