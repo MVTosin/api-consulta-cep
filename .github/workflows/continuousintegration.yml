@@ -20,7 +20,7 @@ jobs:
   Testes:
     runs-on: ubuntu-latest
     steps:
-      - run: echo " Iniciando Testes"
+      - run: echo " Iniciando Novos Testes"
       - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,5 +32,5 @@ jobs:
       - name: Teste como Pytest
         run: |
           pip install pytest pytest-cov pytest-asyncio
-          pytest tests/validacoes.py --doctest-modules --junitxml=junit/test-results.xml
+          pytest tests/test_validacoes.py --doctest-modules --junitxml=junit/test-results.xml
           
