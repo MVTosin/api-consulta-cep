@@ -32,5 +32,5 @@ jobs:
       - name: Teste como Pytest
         run: |
           pip install pytest pytest-cov pytest-asyncio
-          pytest tests/validacoes.py --doctest-modules --junitxml=junit/test-results.xml
+          pytest tests/test_validacoes.py --doctest-modules --junitxml=junit/test-results.xml
           
