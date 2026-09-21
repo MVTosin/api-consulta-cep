@@ -16,5 +16,21 @@ jobs:
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
           linter: pylint
-
+  
+  Testes:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo " Iniciando Testes"
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Teste como Pytest
+        run: |
+          pip install pytest pytest-cov pytest-asyncio
+          pytest tests/validacoes.py --doctest-modules --junitxml=junit/test-results.xml
           

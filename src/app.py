@@ -13,3 +13,6 @@ if validar_cpf(cpf):
     print("CPF válido")
 else:
     print("CPF inválido")
+
+async def root():
+    return {"message": "Hello World!"}

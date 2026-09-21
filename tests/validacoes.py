@@ -1,4 +1,5 @@
-from app import validar_cpf
+from src.app import validar_cpf
+from unittest.mock import patch
 
 
 def test_cpf_valido():
