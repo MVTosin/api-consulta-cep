@@ -7,14 +7,19 @@ def validar_cpf(cpf):
     return len(cpf) == 11
 
 
+def solicitar_cpf():
+    cpf = input("Digite o CPF: ")
+    return validar_cpf(cpf)
+
+
 async def root():
     return {"message": "Hello World!"}
 
 
 if __name__ == "__main__":
-    cpf = input("Digite o CPF: ")
+    resultado = solicitar_cpf()
 
-    if validar_cpf(cpf):
+    if resultado:
         print("CPF válido")
     else:
         print("CPF inválido")
